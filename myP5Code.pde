@@ -17,6 +17,11 @@ draw = function(){
     // draw background
     image(oceanImg, 0, 0, 600, 400);
     
+    // --- CALLING THE 3 NEW EMOJI FUNCTIONS ---
+    drawBlowfish(150, 100, 60);       // Tiny puffer
+    drawTropicalFish(450, 150, 80);   // Colorful friend
+    drawWhale(100, 300, 120);         // Big blue whale
+    
     // follow mouse
     drawFish(mouseX, mouseY, color(255, 150, 0));
 };
@@ -24,6 +29,24 @@ draw = function(){
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
 }
+
+//Blowfish 
+var drawBlowfish = function(x, y, sz) {
+  textSize(sz);
+  text("🐡", x, y);
+};
+
+//Tropical Fish 
+var drawTropicalFish = function(x, y, sz) {
+  textSize(sz);
+  text("🐠", x, y);
+};
+
+//Whale
+var drawWhale = function(x, y, sz) {
+  textSize(sz);
+  text("🐋", x, y);
+};
 
 //🟡drawFish Function - will run when called
 var drawFish = function(fishX, fishY, fishColor){
